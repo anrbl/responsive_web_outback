@@ -7,8 +7,10 @@ $(function () {
 
     const MainSlide = new Swiper('.MainSlide', {
         loop: true,
+        parallax: true,
+        speed: 1000,
         autoplay: {
-            delay: 2500,
+            delay: 4000,
             disableOnInteraction: false,
         },
         on: {
@@ -42,9 +44,9 @@ $(function () {
         loop: true,
         slidesPerView: 2,
         spaceBetween: 350,
-        speed: 900,
+        speed: 600,
         autoplay: {
-            delay: 4000,
+            delay: 3500,
             disableOnInteraction: false,
         }
     });
@@ -54,4 +56,10 @@ $(function () {
     $('.MainItm .arrows .right').on('click', function () {
         ItmSlide.slideNext();
     });
+
+
+    // 자바스크립트 언어로 작성하는 방법
+    // document.querySelector('.MainItm .arrows .left').addEventListener('click',()=> {
+    //     ItmSlide.slidePrev();
+    // })
 });
