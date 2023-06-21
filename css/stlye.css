@@ -1,0 +1,287 @@
+.Header {
+    position: sticky;
+    top: 0;
+    background: #444;
+    z-index: 1000;
+}
+
+.Header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.Header .Logo {
+    display: block;
+    width: 118px;
+    height: 44px;
+    background: url(../images/logo_white_type_02.png) no-repeat;
+    transition: 0.5s;
+}
+
+.Header.on .Logo {
+    background: url(../images/logo_red_type_02.png) no-repeat;
+}
+
+.Header .Gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.Header .Gnb>ul>li>a {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+}
+
+.Header .Login {
+    display: flex;
+    gap: 30px;
+}
+
+.Header .Login a {
+    display: block;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+/* --------------------------------------------- */
+.MainVisual {
+    position: relative;
+}
+
+.MainVisual .MainSlide .itm {
+    height: calc(100vh - 100px);
+}
+
+.MainVisual .MainSlide .itm01 {
+    background: url(../images/main01.jpg) no-repeat center top/cover;
+}
+
+.MainVisual .MainSlide .itm02 {
+    background: url(../images/main02.jpg) no-repeat center top/cover;
+}
+
+.MainVisual .MainSlide .itm03 {
+    background: url(../images/main05.jpg) no-repeat center top/cover;
+}
+
+.MainVisual .MainSlide .itm04 {
+    background: url(../images/main03.jpg) no-repeat center top/cover;
+}
+
+.MainVisual .MainSlide .itm05 {
+    background: url(../images/main04.jpg) no-repeat center top/cover;
+}
+
+.MainVisual .MainSlide .itm06 {
+    background: url(../images/main06.jpg) no-repeat center top/cover;
+}
+
+
+.MainVisual .Arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 999;
+}
+
+.MainVisual .Arrows li {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.MainVisual .Arrows .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(15px, -50%);
+    width: 37px;
+    height: 75px;
+    background: url(../images/btn_main_visual_prev_off.png);
+}
+
+.MainVisual .Arrows .left:hover {
+    background: url(../images/btn_main_visual_prev_on.png);
+}
+
+.MainVisual .Arrows .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-15px, -50%);
+    width: 37px;
+    height: 75px;
+    background: url(../images/btn_main_visual_next_off.png);
+}
+
+.MainVisual .Arrows .right:hover {
+    background: url(../images/btn_main_visual_next_on.png);
+}
+
+
+.MainVisual .dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    gap: 30px;
+}
+
+.MainVisual .dots li {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.MainVisual .dots li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.MainVisual .dots li:hover::before {
+    width: 30px;
+    height: 30px;
+}
+
+.MainVisual .dots li.on::before {
+    width: 30px;
+    height: 30px;
+}
+
+.MainVisual .dots li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.MainVisual .dots li span {
+    font-size: 0;
+}
+
+/* --------------------------------------------- */
+
+
+
+.MainItm {
+    position: relative;
+}
+
+.MainItm .inner {}
+
+.MainItm .detail .txt {
+    position: absolute;
+    top: 100px;
+    left: -400px;
+    opacity: 0;
+    width: 300px;
+    z-index: 999;
+}
+
+.MainItm .detail .txt h3 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 0 50px 0;
+}
+
+.MainItm .detail .txt strong {
+    display: block;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+.MainItm .detail.swiper-slide-next .txt {
+    animation: op 4s .5s both;
+}
+
+.MainItm .detail figure img {
+    width: 100%;
+    transform: scale(0.7);
+    transform-origin: 0 50%;
+}
+
+.MainItm .detail.swiper-slide-next figure img {
+    transform-origin: 100% 50%;
+    transform: scale(1);
+    transition: 0.5s;
+    animation: sc 4s 1s both;
+}
+
+
+@keyframes sc {
+    0% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes op {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    90% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+}
+
+.MainItm .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1600px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainItm .arrows i {
+    padding: 10px;
+    background: #980101;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+}
